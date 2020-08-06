@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>广告轮播图效果</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				text-decoration: none;
+			}
+			#div1{
+				width: 800px;
+				height: 330px;
+				overflow: hidden;
+				border: 1px solid #999;
+				position: relative;
+			}
+			#imglist{
+				width: 4800px;
+				height: 330px;
+			}
+			#imglist li{
+				float: left;
+			}
+			#iconlist{
+				position: absolute;
+				left: 20px;
+				bottom: 10px;
+			}
+			#iconlist span{
+				float: left;
+				width: 25px;
+				height: 25px;
+				border: 1px solid #fff;
+				border-radius: 13px;
+				text-align: center;
+				line-height: 25px;
+				margin-left: 5px;
+				color:#FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<ul id="imglist">
+				<li><a href="#"><img id="pic" src="./images/0.jpg" alt=""></a></li>
+				<li><a href="#"><img id="pic" src="./images/1.jpg" alt=""></a></li>
+				<li><a href="#"><img id="pic" src="./images/2.jpg" alt=""></a></li>
+				<li><a href="#"><img id="pic" src="./images/3.jpg" alt=""></a></li>
+				<li><a href="#"><img id="pic" src="./images/4.jpg" alt=""></a></li>
+				<li><a href="#"><img id="pic" src="./images/0.jpg" alt=""></a></li>
+			</ul>
+			
+			<ul id="iconlist">
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+			</ul>	
+		</div>
+		
+		 <script type="text/javascript"> 
+		 
+			for(let m=0;m<=4;m++){
+				document.getElementsByTagName("span")[m].onclick=function(){
+					document.getElementById("pic").src="./images/"+m+".jpg"
+				}
+			}
+			
+			//获取图片标签
+			var imgs=document.getElementById("imglist").getElementsByTagName("li");
+			//获取列表
+			var icons=document.getElementById("iconlist").getElementsByTagName("span");
+			
+			//初始化图片的位置
+			var left=0;
+			imglist.style.marginLeft=left+"px";
+			
+			//计时器
+			var timer;
+			
+			//自调用
+			run();
+			
+			function run(){
+				if(left<=-4000){
+					imglist.style.marginLeft="0px";
+					left=0;
+				}
+				
+				//暂停4秒
+				var n=(left%800==0)?4000:10;
+				changeimg();
+				
+				//计算图片的下标
+				var m=Math.floor(-left/800);
+				changeicon(m);
+				
+				left-=10;
+				setTimeout(run,n);
+			}
+			
+			function changeimg(){
+				imglist.style.marginLeft=left+"px";
+			}
+			
+			function changeicon(m){
+				for(var i=0;i<icons.length;i++){
+					icons[i].style.backgroundColor="";
+				}
+				icons[m].style.backgroundColor="#b2c1ed";
+			}	
+		</script>
+	</body>
+</html>
