@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+			
+			body{
+				font-size: 12px;
+				font-family: "microsoft yahei";
+			}
+			
+			.bg{
+				width: 1431px;
+				height: 717px;
+				background: url(images/xjl.png) no-repeat;
+				position: relative;
+			}
+			
+			form{
+				width: 600px;
+				height: 400px;
+				position: absolute;
+				left: 48%;
+				top: 1%;
+				margin-top: 80px;
+				padding-left: 30px;
+			}
+			
+			h1{
+				padding-left: 70px;
+			}
+			
+			p{
+				margin-top: 25px;
+			}
+			
+			p input{
+				width: 200px;
+				height: 18px;
+				padding: 2px;
+			}
+			
+			p span{
+				width: 75px;
+				display: inline-block;
+				text-align: right;
+				padding-right: 10px;
+			}
+			
+			.btn input{
+				width: 100px;
+				height: 30px;
+				line-height: 16px;
+				text-align: center;
+				margin-left: 75px;
+				color: #FFFFFF;
+				font-size: 20px;
+				font-family: "microsoft yahei";
+				background-color: pink;
+			}
+			
+			.lucky{
+				width: 100px;
+				height: 25px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg">
+			<form action="" method="post">
+				<h1>快乐小精灵信息登记表</h1>
+				<p><span>小精灵名：</span><input type="text" name="username" value="兔小白" disabled>（不能修改，只能查看）</p>
+				<p><span>真实姓名：</span><input type="text" name="truename" placeholder="例如:李小婷" required>（必须填写，只能输入汉字）</p>
+				<p><span>真实年龄：</span><input type="number" name="trueage" value="18" min="1" max="120" required>（必须填写）</p>
+				<p><span>出生日期：</span><input type="date" name="username" required>（必须填写）</p>
+				<p><span>电子邮箱：</span><input type="email" name="email" required>（必须填写）</p>
+				<p><span>身份证号：</span><input type="text" name="id" required>（必须填写，能够以数字、字母x结尾的身份证号）</p>
+				<p><span>手机号码：</span><input type="tel" name="tel" required>（必须填写）</p>
+				<p><span>个人主页：</span><input type="url" name="website">（请选择网址）</p>
+				<p><span>幸运颜色：</span><input type="color" name="lucky" class="lucky" value="#ffff7f">（请选择你喜欢的颜色）</p>
+				<p class="btn">
+					<input type="submit" value="提交" />
+					<input type="reset" value="重置" />
+				</p>
+			</form>
+		</div>
+	</body>
+</html>

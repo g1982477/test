@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				list-style: none;  /* 清除列表属性 */
+				outline: none;
+			}
+			body{
+				text-align: center;
+				font-family: "microsoft yahei";
+			}
+			a{
+				font-size: 20px;
+				text-indent: 1em;
+				display:inline-block;
+			}
+			a:nth-child(1){  /* 首个缩进改为0 */
+				text-indent: 0;
+			}
+			a:link,a:visited{
+				color:#000000;
+				text-decoration: none;   /* 去掉下划线 */
+			}
+			a:hover{
+				color:#5F9EA0;
+				text-decoration: underline;
+			}
+			
+			dl{
+				display: none;
+			}
+			
+			dd{
+				font-size: 22px;
+				line-height: 38px;
+				color: #333;
+				text-align: left;
+				margin-left: 280px;
+			}
+			dd:before{
+				content:url(./images/icon.png);
+			}
+			dd:nth-child(2) em{   /* 超s级设计神器 */
+				color: #55aaff;
+				font-style: normal;
+				font-weight: bold;
+			}
+			dd:nth-child(3) em{   /* 像素构成的图像 */
+				font-weight: bold;
+				font-style: normal;
+				color: orange;
+			}
+			dd:nth-child(odd){
+				color: #00aa7f;
+			}
+			
+			:target{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>网页设计软件列表(点击查看)</h2>
+		<hr width="750" size="3" color="#000000" />
+		<nav>
+			<a href="#new1">Photoshop软件</a>
+			<a href="#new2">illustrator软件</a>
+			<a href="#new3">Dreamweaver软件</a>
+			<a href="#new4">Fireworks软件</a>
+		</nav>
+		<hr width="750" size="3" color="#000000" />
+		<dl id="new1">
+			<dt><img src="images/Photoshop.jpg" width="700"></dt>
+			<dd>Photoshop一款好到违反广告法的<em>超s级设计神器</em>！给画面来点动感吧。</dd>
+			<dd>Photoshop处理以<em>像素构成的图像</em>，可以有效地进行图片编辑调整工作。</dd>
+			<dd>Photoshop有很多功能，在图像、图形、文字、出版等各方面都有涉及。</dd>
+			<dd>在制作建筑效果图包括许多三维场景时，常常需在Photoshop进行调整。</dd>
+		</dl>
+		
+		<dl id="new2">
+			<dt><img src="./images/illustrator.jpg"></dt>
+			<dd>illustrator是一种应用于出版、多媒体和在线图像的<em>标准矢量插画</em>的软件。</dd>
+			<dd>illustrator广泛应用于<em>印刷出版、海报书籍、专业插画、多媒体图像处理。</em></dd>
+			<dd>illustrator可以为线稿提供较高的精度和控制，简单到复杂项目都能生产。</dd>
+			<dd>根据不完全统计全球大约有37%的界面设计师在使用illustrator进行设计。</dd>
+		</dl>
+		
+		<dl id="new3">
+			<dt><img src="./images/Dreamweaver.jpg" width="700"></dt>
+			<dd>Dreamweaver是第一套针对<em>专业网页设计师</em>特别发展的网页开发工具。</dd>
+			<dd>利用它可以轻易地制作出<em>跨越平台和跨越浏览器</em>限制的充满动感的网页。</dd>
+			<dd>Dreamweaver自MX版本开始，使用了Opera的排版引擎作为网页预览。</dd>
+			<dd>Dreamweaver可以在AdobeCreativeSuite4的不同组件之间切换工作。</dd>
+		</dl>
+		
+		<dl id="new4">
+			<dt><img src="./images/Fireworks.jpg" width="700"></dt>
+			<dd>Fireworks是Adobe推出的一款<em>网页作图软件</em>，可以加速Web设计开发。</dd>
+			<dd>Fireworks是一款创建优化<em>Web图像</em>和快速构建网站与Web界面的工具。</dd>
+			<dd>Fireworks可以创建和编辑矢量图像与位图图像，并导入PS和AI文件中。</dd>
+			<dd>Fireworks采用与PS类似的图层结构来管理原型，更易组织Web页面。</dd>
+		</dl>
+	</body>
+</html>

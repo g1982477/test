@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-1.12.4.js"></script>
+		<style>
+			div{
+				margin-top: 2px;
+				width: 200px;
+				height: 400px;
+				background-color: #5F9EA0;
+				display: none;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<button>淡入效果</button>
+		<button>淡出效果</button>
+		<button>淡入淡出切换</button>
+		<button>修改透明度</button>
+		<div></div>
+		
+		<script>
+			$(function(){
+				$("button").eq(0).click(function(){
+					// 淡入 fadeIn()
+					$("div").fadeIn(1000);
+				})
+				
+				$("button").eq(1).click(function(){
+					// 淡出 fadeOut()
+					$("div").fadeOut(1000);
+				})
+				
+				$("button").eq(2).click(function(){
+					// 淡入淡出切换 fadeToggle()
+					$("div").fadeToggle(1000);
+				})
+				
+				$("button").eq(3).click(function(){
+					// 修改透明度 fadeTo()  速度和透明度必须写
+					$("div").fadeTo(1000,0.5);
+				})
+			})
+		</script>
+	</body>
+</html>
+
+<!-- 
+	jQuery效果
+	jQuery封装了很多动画效果，最为常见的如下:
+	
+	显示与隐藏		滑动				淡入淡出			自定义动画
+	show()			slideDown()		fadeln()		animate()
+	hide()			slideUp()		fadeOut()
+	toggle()		slideToggle()	fadeToggle()
+									fadeTo()
+									
+	1、语法规范
+	淡入效果 	 fadeln([speed,[easing],[fn]])
+	淡出效果 	 fadeOut([speed,[easing],[fn]])
+	淡入淡出切换  fadeToggle([speed,[easing],[fn]])
+					
+	2、参数
+	(1)参数可以省略，无动画直接显示
+	(2)speed:三种预定速度之一的字符串("slow","normal","fast")或表示动画时长的毫秒数值(如：1000)
+	(3)easing:(Optional)用来指定切换效果，默认是"swing",可用参数"linear"
+	(4)fh:回调函数，在动画完成执行时的函数，每个元素执行一次
+	
+	3、淡入淡出效果
+	(1)渐进方式调整到指定的不透明度
+	fadeTo([speed,opacity,[easing],[fn]])
+	
+	(2)效果参数
+		[1]opacity透明度必须写，取值0~1之间
+必须写:	[2]speed:三种预定速度之一的字符串("slow","normal","fast")或表示动画时长的毫秒数值(如：1000)
+		[3]easing:(Optional)用来指定切换效果，默认是"swing",可用参数"linear"
+		[4]fh:回调函数，在动画完成执行时的函数，每个元素执行一次
+ -->
